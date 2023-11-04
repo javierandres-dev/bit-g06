@@ -1,0 +1,69 @@
+/* Comentario de CSS */
+/* Textos */
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+h1 {
+  background-color: olive;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  text-transform: capitalize;
+  text-shadow: 4px 4px red;
+  font-family: 'Times New Roman', Times, serif;
+}
+h2 {
+  font-family: 'Agbalumo';
+}
+p {
+  color: green;
+  font-size: 24px;
+  direction: rtl;
+  text-decoration: overline;
+  word-spacing: 10px;
+  line-height: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+}
+/* Imágenes */
+figure {
+  width: 500px;
+  margin: auto;
+}
+img {
+  width: 100%;
+  border-radius: 20px;
+  opacity: 0.75;
+}
+figcaption {
+  text-align: center;
+}
+div {
+  height: 1000px;
+}
+/* Listas */
+ul {
+  list-style: none;
+}
+ol {
+  background-color: black;
+  padding: 20px;
+}
+ol li {
+  color: white;
+  border: 1px solid yellow;
+  margin: 20px;
+  padding: 20px;
+}
+/* Tablas */
+table {
+  border: 1px solid pink;
+  width: 400px;
+  margin: auto;
+}
+th,
+td {
+  border: 1px solid fuchsia;
+}
+thead {
+  background-color: olive;
+  color: yellow;
+}
