@@ -67,3 +67,18 @@ thead {
   background-color: olive;
   color: yellow;
 }
+/* Pseudo elementos */
+p::first-letter {
+  color: red;
+  font-size: 32px;
+}
+/* Pseudo clases */
+a:link {
+  color: red;
+  font-size: 32px;
+  text-decoration: none;
+}
+a:hover {
+  color: green;
+  text-decoration: underline;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posición</title>
+    <style>
+      .caja-padre {
+        background-color: red;
+        width: 300px;
+        height: 300px;
+        position: relative;
+        top: 50px;
+        left: 50px;
+      }
+      .caja-hijo {
+        background-color: blue;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+      }
+      .caja-hija {
+        background-color: green;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        z-index: 1;
+      }
+      .navegacion {
+        background-color: salmon;
+        position: sticky;
+        top: 0;
+      }
+      .contenido {
+        height: 2000px;
+        background-color: yellow;
+      }
+      .chat {
+        position: fixed;
+        bottom: 32px;
+        right: 32px;
+        font-size: 64px;
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="chat">chat</div> -->
+    <h1>Posición</h1>
+    <hr />
+    <div class="caja-padre">
+      <div class="caja-hija"></div>
+      <div class="caja-hijo"></div>
+    </div>
+    <!-- <div class="navegacion">navegación</div>
+    <div class="contenido">contenido</div> -->
+  </body>
+</html>
