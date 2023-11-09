@@ -1,6 +1,28 @@
 # bit-repo_06
 ## Guías
 ---
+### Proyecto calificable 2
+#### Requerimientos:
+* Estructura del proyecto:
+  - README
+  - index.html
+  - contacto.html
+  * estilos
+    - estilos.css
+  * imagenes
+
+* Crear un proyecto acerca de una empresa.
+  * Contenido
+    - Inicio, Productos, Servicios, Nosotros, Contacto
+  - Debe utilizar etiquetas semánticas de estructura y de contenido
+  - No usar JavaScript ni frameworks.
+  - Detalle en contenido y en estilos, debe ser responsive.
+##### Entrega
+Fecha de entrega: POR DEFINIR, si entrega en otra fecha la nota máxima sera de 3.5
+- Tiempo límite: 2 minutos
+- Nota máxima: 5
+- Compartir cámara, micrófono y pantalla.
+---
 ### Proyecto calificable 1
 #### Requerimientos:
 * Crear archivo README que debe tener información acerca del proyecto
