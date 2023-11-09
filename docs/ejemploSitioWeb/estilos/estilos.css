@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Roboto:ital,wght@0,100;0,400;1,900&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Agbalumo', serif;
+  font-size: 32px;
+}
+a {
+  font-family: 'Agbalumo', serif;
+  font-size: 24px;
+}
+.label-menu {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+.check-menu {
+  display: none;
+}
+.check-menu:checked + div {
+  transform: translateX(0);
+}
+.enlaces-menu {
+  transform: translateX(-200%);
+}
+.material-symbols-outlined {
+  font-size: 64px;
+  color: blue;
+}
+@media screen and (min-width: 768px) {
+  .label-menu {
+    display: none;
+  }
+  .enlaces-menu {
+    transform: translateX(0);
+  }
+}
