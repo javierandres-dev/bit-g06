@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Roboto:ital,wght@0,100;0,400;1,900&display=swap');
 
+:root {
+  --color-principal: #f08;
+  --color-secundario: #0ff;
+  --fuente-base: 'Roboto', sans-serif;
+  --fuente-titulos: 'Agbalumo', serif;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--fuente-base);
 }
 h1,
 h2,
@@ -9,36 +16,110 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Agbalumo', serif;
+  font-family: var(--fuente-titulos);
   font-size: 32px;
 }
+header {
+  display: flex;
+  justify-content: space-between;
+}
 a {
-  font-family: 'Agbalumo', serif;
-  font-size: 24px;
+  color: inherit;
+  text-decoration: none;
 }
 .label-menu {
   position: absolute;
   top: 16px;
   right: 16px;
+  z-index: 1;
 }
 .check-menu {
   display: none;
 }
 .check-menu:checked + div {
-  transform: translateX(0);
+  transform: translateY(0);
 }
 .enlaces-menu {
-  transform: translateX(-200%);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transform: translateY(-200%);
+  transition: all 500ms ease-in-out;
+}
+.enlaces-menu a {
+  font-family: 'Agbalumo', serif;
+  font-size: 24px;
+  color: var(--color-principal);
+}
+.enlaces-menu a:hover {
+  color: var(--color-secundario);
+  text-decoration: underline;
+}
+.enlaces-menu a:active {
+  color: red;
+}
+.fa-brands {
+  font-size: 32px;
+}
+.fa-facebook {
+  color: blue;
+}
+.fa-linkedin {
+  color: lightblue;
+}
+.fa-comments {
+  font-size: 32px;
 }
 .material-symbols-outlined {
   font-size: 64px;
+  color: rgb(20, 35, 159);
+}
+.boton-wa {
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+}
+/* Jerarquía, Especificidad
+1. estilos en línea
+2. id
+3. clases, pseudo clases
+4. elementos, pseudo elementos
+ */
+#divX {
+  color: orange;
+}
+.div-x {
+  color: red;
+}
+div {
   color: blue;
 }
+.contenedor {
+  width: 100%;
+  border: 2px solid red;
+  box-shadow: 10px 10px 20px 5px rgba(150, 10, 10, 0.5);
+}
 @media screen and (min-width: 768px) {
+  .contenedor {
+    max-width: 720px;
+    margin: auto;
+  }
   .label-menu {
     display: none;
   }
   .enlaces-menu {
-    transform: translateX(0);
+    flex-direction: row;
+    justify-content: space-evenly;
+    transform: translateY(0);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contenedor {
+    max-width: 960px;
+    margin: auto;
+  }
+  .enlaces-menu {
+    justify-content: end;
+    gap: 20px;
   }
 }
