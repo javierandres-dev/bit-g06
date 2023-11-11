@@ -29,6 +29,7 @@ Contenido acerca de el desarrollador web.
   - README
   - index.html
   - mi-foto.jpg
+  - Enlace a su GitHub
 
 - Responsivo (320px, 768px, 1024px)
 ##### Entrega
