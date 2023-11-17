@@ -91,6 +91,7 @@ console.log(Boolean(undefined));
 */
 
 /* Métodos de interacción */
+/*
 // entrada
 const nombre = prompt('Escriba su nombre:');
 const siOno = confirm('¿Acepta continuar?');
@@ -101,3 +102,4 @@ console.log(siOno);
 console.log(typeof siOno);
 document.write(nombre);
 alert(siOno);
+*/
