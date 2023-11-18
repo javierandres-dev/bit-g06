@@ -188,5 +188,49 @@
         >
       </li>
     </ol>
+    <hr />
+    <ul id="nombres"></ul>
+    <script>
+      const nombres = [
+        'Eduardo Alaña',
+        'Juan Castillo',
+        'Brian Córdoba',
+        'Pablo Escobar',
+        'Angelica Mosquera',
+        'Hernan Molano',
+        'Andrés Molano',
+        'Andrés Martinez',
+        'Leonhard Iglesias',
+        'Luis Fuquen',
+        'Juan Brunal',
+        'Carlos Castro',
+        'Nicolas Guzman',
+        'Carlos Romero',
+        'Laura Garzón',
+        'Juan Rodriguez',
+        'Miguel Arango',
+        'Diego Sanchez',
+        'Carlos Angulo',
+        'Claudia Florez',
+        'Darleida Prada',
+        'Daniel Vanegas',
+        'Javier Quintero',
+        'Julieth Espitia',
+        'Juan Moncada',
+        'Ingrid Rincón',
+        'Jefferson Villamizar',
+        'Frank Ramirez',
+        'José Rodriguez',
+        'Gabriel Martinez',
+      ];
+      const $ul = document.getElementById('nombres');
+      let html = '';
+      for (let i = 0; i < nombres.length; i++) {
+        html += `
+        <li>${nombres[i]}</li>
+        `;
+      }
+      $ul.innerHTML = html;
+    </script>
   </body>
 </html>
