@@ -1,9 +1,9 @@
 'use strict';
-/* Preguntar nombre al usuario y saludarlo por su nombre. */
-/*
-const nombre = prompt('Por favor ingrese su nombre:');
-alert('Hola, ' + nombre);
-*/
+// Preguntar nombre al usuario y saludarlo por su nombre.
+function saludarUsuario(nombre) {
+  document.write(`Hola, ${nombre}`);
+}
+//saludarUsuario(prompt('Por favor ingrese su nombre:'));
 
 /* Preguntar nombre al usuario y saludarlo por su nombre.
 Si el usuario no escribe su nombre saludar: "Hola, desconocido."
@@ -16,7 +16,6 @@ if (nombre) {
   document.write('hola, desconocido.');
 }
 */
-
 // Leer nombre y apellido, saludar por nombre y apellido.
 // Pregunte al usuario si desea continuar, responder con hola o adiós.
 // Leer nombre y edad, Mostrar si es o no mayor de edad.

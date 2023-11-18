@@ -1,8 +1,8 @@
 'use strict';
-/* Operadores */
+// Operadores
 let miVariable = null;
 
-/* O. Aritméticos */
+// Op. Aritméticos
 /*
 console.log(8 + 4);
 console.log(8 - 4);
@@ -18,7 +18,7 @@ miVariable--;
 console.log(miVariable);
 */
 
-/* O. Asignación */
+// Op. Asignación
 /*
 const ocho = 8;
 const cuatro = 4;
@@ -32,7 +32,7 @@ resultado **= 2;
 console.log(resultado);
 */
 
-/* O. Comparación */
+// Op. Comparación
 /*
 console.log(8 == 4);
 console.log(8 === 4);
@@ -48,7 +48,7 @@ console.log(8 >= 4);
 console.log(8 <= 4);
 */
 
-/* O. Lógicos */
+// Op. Lógicos
 /*
 console.log(true && true);
 console.log(true && false);
@@ -59,7 +59,7 @@ console.log(!true);
 console.log(!false);
 */
 
-/* O. Concatenación */
+// Op. Concatenación
 /*
 console.log('Pepita' + ' ' + 'Pérez');
 const numero1 = 10;
@@ -68,23 +68,29 @@ console.log(numero1 + numero2);
 console.log(numero1 + Number(numero2));
 */
 
-/* Secuencia */
+// Precedencia de operadores
+// PEMDAS: Paréntesis Exponentes Multiplicación División Adición Sustracción
+/*
+const operacion = 12 / 3 + 2 * 3 - 1;
+console.log(operacion);
+*/
+
+// Secuencia
 /*
 console.log('hola');
 console.log('¿qué más?');
 console.log('chaito');
 */
 
-/* Control de flujo */
+// Control de flujo
 /*
 console.log('buenos días');
 console.log('buenas tardes');
 console.log('buenas noches');
 */
 
-/* Estructuras de control */
-
-/* E.C. Condicionales */
+// Estructuras de control
+// Es.Co. Condicionales
 /*
 if (true) {
   console.log('Si, se cumplió la condición.');
@@ -122,4 +128,51 @@ switch (perfil) {
     }
 
     console.log('continua la secuencia');
+*/
+// Ciclos
+/*
+for (let i = 0; i < 5; i++) {
+  console.log('desde ciclo for, valor de i:', i);
+}
+
+let i = 0;
+while (i < 5) {
+  console.log('desde ciclo while, valor de i:', i);
+  i++;
+}
+
+let j = 0;
+do {
+  console.log('desde ciclo do...while, valor de j:', j);
+  j++;
+} while (j < 5);
+*/
+// Funciones
+// Fu. Declarada.
+/*
+function saludar() {
+  console.log('hola');
+}
+saludar();
+const retornado = saludar();
+console.log(retornado);
+*/
+/*
+function obtenerSaludo() {
+  return 'quiubo';
+}
+const retornado = obtenerSaludo();
+console.log(retornado);
+*/
+/*
+function saludarUsuario(nombre = 'Desconocido', apellido = '') {
+  //return 'Hola, ' + nombre + ' ' + apellido + ' "bienvenido"';
+  //return 'Hola, ' + nombre + ' ' + apellido + " 'bienvenido'";
+  // Interpolación
+  return `Hola ${nombre} ${apellido} "bienvenido"`;
+}
+console.log(saludarUsuario('Pepita', 'Pérez'));
+console.log(saludarUsuario('Pepito', 'López'));
+console.log(saludarUsuario('Fulanito', 'De Tal'));
+console.log(saludarUsuario());
 */

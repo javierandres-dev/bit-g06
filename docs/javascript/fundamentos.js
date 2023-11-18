@@ -7,7 +7,7 @@
 //alert('Hola, desde archivo externo.');
 //console.log('Hola, desde archivo externo.');
 
-/* VARIABLES */
+// VARIABLES
 /*
 manera1 = 1;
 var manera2 = 2;
@@ -27,7 +27,7 @@ manera4 = 40;
 console.log(manera4);
 */
 
-/* Ámbito de las variables */
+// Ámbito de las variables
 // ámbito global
 /*
 const nombre = 'pepita';
@@ -42,16 +42,16 @@ const nombre = 'pepita';
 console.log(apellido);
 */
 
-/* Modo estricto */
+// Modo estricto
 'use strict';
 /*
 nombre = 'pepita';
 console.log(nombre);
 */
 
-/* Tipos de dato primitivos */
+// Tipos de dato primitivos
 /*
-let miVariable = 'pepita'; // string
+let miVariable = 'pepita'; // string "" '' ``
 miVariable = 1; // number
 miVariable = true; // boolean
 miVariable = null; // null (bug)
@@ -60,7 +60,7 @@ console.log(miVariable);
 console.log(typeof miVariable);
 */
 
-/* Conversión de tipos */
+// Conversión de tipos
 /*
 let miVariable = 1;
 console.log(miVariable);
@@ -73,7 +73,7 @@ console.log(miVariable);
 console.log(typeof miVariable);
 */
 
-/* Truthy and Falsy */
+// Truthy and Falsy
 // verdadero
 /*
 console.log(Boolean(true));
@@ -81,7 +81,7 @@ console.log(Boolean(1));
 console.log(Boolean(-1));
 console.log(Boolean('a'));
 */
-// false
+// falso
 /*
 console.log(Boolean(false));
 console.log(Boolean(0));
@@ -90,7 +90,7 @@ console.log(Boolean(null));
 console.log(Boolean(undefined));
 */
 
-/* Métodos de interacción */
+// Métodos de interacción
 /*
 // entrada
 const nombre = prompt('Escriba su nombre:');
@@ -103,3 +103,27 @@ console.log(typeof siOno);
 document.write(nombre);
 alert(siOno);
 */
+
+// Tipos de dato no primitivos
+// TNP. Arreglo.
+/*
+const miArreglo = ['a', 'b', 'c', 'd'];
+console.log(miArreglo);
+console.log(miArreglo[1]);
+console.log(typeof miArreglo);
+console.log(miArreglo instanceof Array);
+*/
+const miArreglo = ['a', 'b', 'c', 'd', 'e', 'f'];
+console.log(miArreglo.length);
+
+for (let index = 0; index < miArreglo.length; index++) {
+  const element = miArreglo[index];
+  console.log('for:', element);
+}
+
+let indice = 0;
+while (indice < miArreglo.length) {
+  const elemento = miArreglo[indice];
+  console.log('while:', elemento);
+  indice++;
+}
