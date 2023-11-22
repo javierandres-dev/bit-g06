@@ -112,7 +112,6 @@ console.log(miArreglo);
 console.log(miArreglo[1]);
 console.log(typeof miArreglo);
 console.log(miArreglo instanceof Array);
-*/
 const miArreglo = ['a', 'b', 'c', 'd', 'e', 'f'];
 console.log(miArreglo.length);
 
@@ -127,3 +126,29 @@ while (indice < miArreglo.length) {
   console.log('while:', elemento);
   indice++;
 }
+*/
+// TNP. Objeto.
+/*
+const miObjetoVacio = {};
+const miObjeto = {
+  apellido: 'pérez',
+  llave: 'valor',
+  nombre: 'pepita',
+  cantidadHijos: 2,
+  activo: true,
+  pasatiempos: ['leer', 'escuchar música'],
+  altura: 1.5,
+  telefono: null,
+  fechaNacimiento: new Date('December 17, 2003'),
+  saludar: function () {
+    console.log('hola, soy un método');
+  },
+};
+console.log(miObjeto);
+console.log(miObjeto.nombre);
+console.log(miObjeto['apellido']);
+miObjeto.saludar();
+miObjeto.cantidadHijos = 3;
+miObjeto.peso = 50;
+delete miObjeto.llave;
+*/
