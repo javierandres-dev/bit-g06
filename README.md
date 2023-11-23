@@ -56,3 +56,5 @@ Fecha de entrega: POR DEFINIR, si entrega en otra fecha la nota máxima sera de 
 - Tiempo límite: 2 minutos
 - Nota máxima: 5
 - Compartir cámara, micrófono y pantalla.
+---
+[Página del curso](https://javierandres-dev.github.io/bit-repo_06/)
