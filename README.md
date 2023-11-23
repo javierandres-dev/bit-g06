@@ -33,7 +33,7 @@ Contenido acerca de una empresa.
 
 - Responsivo
 ##### Entrega
-Fecha de entrega: POR DEFINIR, si entrega en otra fecha la nota máxima sera de 3.5
+Fecha de entrega: Lunes, 27 de noviembre de 2023, si entrega en otra fecha la nota máxima sera de 3.5
 - Tiempo límite: 2 minutos
 - Nota máxima: 5
 - Compartir cámara, micrófono y pantalla.
