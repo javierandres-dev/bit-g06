@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Noto+Sans+JP:wght@900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(42, 84, 102, 1) 50%,
+    rgba(12, 105, 185, 1) 100%
+  );
+  margin: 0;
+}
+div {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  overflow-x: hidden;
+  place-items: center;
+  padding-top: 4rem;
+}
+a {
+  color: inherit;
+}
+a:link {
+  font-family: 'Noto Sans JP', sans-serif;
+  text-decoration: none;
+}
+a:hover {
+  font-family: 'Dancing Script', cursive;
+  color: purple;
+}
+figure {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem 0.5rem grey;
+  filter: grayscale(100%);
+  margin: 0;
+  padding: 2rem 2rem 4rem 2rem;
+  position: relative;
+  transform: scale(0.8);
+  transition: all 1000ms ease-in-out;
+}
+figure:nth-child(odd) {
+  transform: rotate(1deg);
+}
+figure:nth-child(even) {
+  transform: rotate(-1deg);
+}
+figure:nth-child(odd)::before,
+figure:nth-child(even)::after {
+  content: '';
+  height: 3rem;
+  position: absolute;
+  top: 0;
+  width: 10rem;
+  background-color: rgba(100, 100, 100, 0.5);
+}
+figure:nth-child(odd)::before {
+  left: -4rem;
+  transform: rotate(-45deg);
+}
+figure:nth-child(even)::before {
+  right: -4rem;
+  transform: rotate(45deg);
+}
+figure:hover {
+  filter: grayscale(0%);
+  transform: rotate(0deg);
+}
+figure img {
+  height: 24rem;
+  object-fit: cover;
+  width: 24rem;
+}
+figcaption {
+  font-size: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+.xx {
+  color: #f11a7b;
+}
+.xy {
+  color: #362fd9;
+}
+@media screen and (min-width: 768px) {
+  div {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 4rem;
+    overflow-x: unset;
+  }
+}
+@media screen and (min-width: 1024px) {
+  div {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1200px) {
+  div {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 1400px) {
+  div {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
