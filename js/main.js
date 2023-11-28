@@ -41,7 +41,7 @@ const equipo = [
     web: 'https://carmobu.github.io/www/',
     foto: 'https://carmobu.github.io/www/assets/mi-foto.jpg',
     genero: 'xy',
-  },0
+  },
   {
     id: 7,
     nombre: 'Carlos Andrés Molano',
@@ -73,8 +73,8 @@ const equipo = [
   {
     id: 11,
     nombre: 'Juan Brunal',
-    web: "https://sebastianbrunal.github.io/www/",
-    foto: "https://sebastianbrunal.github.io/www/assets/mi-foto.jpg",
+    web: 'https://sebastianbrunal.github.io/www/',
+    foto: 'https://sebastianbrunal.github.io/www/assets/mi-foto.jpg',
     genero: 'xy',
   },
   {
