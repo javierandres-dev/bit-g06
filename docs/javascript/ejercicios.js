@@ -1,5 +1,5 @@
 'use strict';
-// Preguntar nombre al usuario y saludarlo por su nombre.
+// 1. Preguntar nombre al usuario y saludarlo por su nombre.
 /*
 function saludarUsuario(nombre) {
   document.write(`Hola, ${nombre}`);
@@ -7,7 +7,7 @@ function saludarUsuario(nombre) {
 saludarUsuario(prompt('Por favor ingrese su nombre:'));
 */
 
-/* Preguntar nombre al usuario y saludarlo por su nombre.
+/* 2. Preguntar nombre al usuario y saludarlo por su nombre.
 Si el usuario no escribe su nombre saludar: "Hola, desconocido."
 */
 /*
@@ -19,10 +19,10 @@ if (nombre) {
 }
 */
 
-// Leer nombre y apellido, saludar por nombre y apellido.
-// Pregunte al usuario si desea continuar, responder con hola o adiós.
-// Leer nombre y edad, Mostrar si es o no mayor de edad.
-// Leer un rol, (admin, ventas, cliente), acceso de acuerdo al rol.
+// 3. Leer nombre y apellido, saludar por nombre y apellido.
+// 4. Pregunte al usuario si desea continuar, responder con hola o adiós.
+// 5. Leer nombre y edad, Mostrar si es o no mayor de edad.
+// 6. Leer un rol, (admin, ventas, cliente), acceso de acuerdo al rol.
 /*
 function accesoXrol(rol) {
   switch (rol) {
@@ -40,18 +40,36 @@ const retornado = accesoXrol(prompt('Por favor escriba un rol:'));
 document.write(retornado);
 */
 
-// Leer un número, mostrar el doble de n.
-// Leer un número, mostrar la mitad de n.
-// Leer un número, mostrar si es positivo, negativo o cero.
-// Leer un número, mostrar si es par o impar.
-// Leer dos números, mostrar el mayor.
-// Leer dos números, mostrar operaciones básicas (+,-,x,/,%,cuadrado).
-// Leer dos números, mostrar la suma dividido en la resta.
-// Pedir un número y mostrar los números pares desde 1 hasta n.
-// Pedir un número, mostrar la suma total desde 1 hasta n.
-// Pedir un número, mostrar la suma de los números pares desde 1 hasta n.
-// Pedir un número, mostrar la suma de los números impares desde 1 hasta n.
-// Pedir un número, mostrar multiplos de 3 desde 1 hasta n.
-// Pedir un número, mostrar los números desde n hasta 0.
-// Pedir un número, mostrar los números desde 0 hasta n.
-// Pedir un número, mostrar su tabla de multiplicar desde 0 hasta 10.
+// 7. Leer un número, mostrar el doble de n.
+// 8. Leer un número, mostrar la mitad de n.
+// 9. Leer un número, mostrar si es positivo, negativo o cero.
+// 10. Leer un número, mostrar si es par o impar.
+// 11. Leer dos números, mostrar el mayor.
+// 12. Leer dos números, mostrar operaciones básicas (+,-,x,/,%,cuadrado).
+// 13. Leer dos números, mostrar la suma dividido en la resta.
+// 14. Pedir un número y mostrar los números pares desde 1 hasta n.
+// 15. Pedir un número, mostrar la suma total desde 1 hasta n.
+// 16. Pedir un número, mostrar la suma de los números pares desde 1 hasta n.
+// 17. Pedir un número, mostrar la suma de los números impares desde 1 hasta n.
+// 18. Pedir un número, mostrar multiplos de 3 desde 1 hasta n.
+// 19. Pedir un número, mostrar los números desde n hasta 0.
+// 20. Pedir un número, mostrar los números desde 0 hasta n.
+// 21. Pedir un número, mostrar su tabla de multiplicar desde 0 hasta 10.
+// 22. Adivinar el número, leer un número y decir si adivinó el número
+
+const adivinaNumero = (numeroAleatorio) => {
+  console.log(numeroAleatorio);
+};
+
+adivinaNumero(Math.floor(Math.random() * 10) + 1);
+/*
+do {
+    console.log("bloque ejecutandose");
+  } while (numeroUsuario != numeroAleatorio);
+*/
+
+/*
+function adivinaNumero(numeroAleatorio) {
+  console.log(numeroAleatorio);
+}
+*/
