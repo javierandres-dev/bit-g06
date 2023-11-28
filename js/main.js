@@ -10,8 +10,8 @@ const equipo = [
   {
     id: 2,
     nombre: 'Juan Castillo',
-    web: null,
-    foto: null,
+    web: 'https://juanscastillo54.github.io/www/',
+    foto: 'https://juanscastillo54.github.io/www/assets/mi-foto.jpg',
     genero: 'xy',
   },
   {
@@ -37,14 +37,14 @@ const equipo = [
   },
   {
     id: 6,
-    nombre: 'Hernan Molano',
+    nombre: 'Carlos Hernan Molano',
     web: 'https://carmobu.github.io/www/',
     foto: 'https://carmobu.github.io/www/assets/mi-foto.jpg',
     genero: 'xy',
-  },
+  },0
   {
     id: 7,
-    nombre: 'Andrés Molano',
+    nombre: 'Carlos Andrés Molano',
     web: 'https://camolano85.github.io/www/',
     foto: 'https://camolano85.github.io/www/assets/mi-foto.jpg',
     genero: 'xy',
@@ -73,15 +73,15 @@ const equipo = [
   {
     id: 11,
     nombre: 'Juan Brunal',
-    web: null,
-    foto: null,
+    web: "https://sebastianbrunal.github.io/www/",
+    foto: "https://sebastianbrunal.github.io/www/assets/mi-foto.jpg",
     genero: 'xy',
   },
   {
     id: 12,
     nombre: 'Carlos Castro',
-    web: 'https://ccarlitoznorway.github.io/www/',
-    foto: 'https://ccarlitoznorway.github.io/www/assets/mi-foto.jpg',
+    web: null,
+    foto: null,
     genero: 'xy',
   },
   {
