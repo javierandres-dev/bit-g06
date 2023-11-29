@@ -176,3 +176,29 @@ console.log(saludarUsuario('Pepito', 'López'));
 console.log(saludarUsuario('Fulanito', 'De Tal'));
 console.log(saludarUsuario());
 */
+// Sincrónico
+/*
+const fnSincrono = () => {
+  console.log('primero');
+  console.log('segundo');
+  console.log('tercero');
+};
+fnSincrono();
+*/
+// Asíncrono
+/*
+const fnAsincrono = () => {
+  console.log('primero');
+  setTimeout(() => {
+    console.log('3 sg');
+  }, 3000);
+  setTimeout(() => {
+    console.log('1 sg');
+  }, 1000);
+  setTimeout(() => {
+    console.log('2 sg');
+  }, 2000);
+  console.log('segundo');
+};
+fnAsincrono();
+*/
