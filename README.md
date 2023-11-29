@@ -1,5 +1,8 @@
 # bit-repo_06
-## Guías
+---
+### Proyecto (opcional)
+#### Objetivo
+Hacer una sitio web para practicas libres y ejercicios propuestos.
 ---
 ### Proyecto calificable 1
 #### Objetivo
@@ -11,7 +14,8 @@ Contenido acerca de el desarrollador web.
   - README
   - index.html
   - mi-foto.jpg
-  - Enlace a su GitHub
+  - Enlace a su GitHub en una nueva pestaña
+  - Enlace a cada proyecto adicional en una nueva pestaña
 
 - Responsivo (320px, 768px, 1024px)
 ##### Entrega
@@ -33,22 +37,20 @@ Contenido acerca de una empresa.
 
 - Responsivo
 ##### Entrega
-Fecha de entrega: Lunes, 27 de noviembre de 2023, si entrega en otra fecha la nota máxima sera de 3.5
+Fecha de entrega: Lunes, 4 de diciembre de 2023, si entrega en otra fecha la nota máxima sera de 3.5
 - Tiempo límite: 2 minutos
 - Nota máxima: 5
 - Compartir cámara, micrófono y pantalla.
 ---
 ### Proyecto calificable 3
 #### Objetivo
-Hacer una sitio web con HTML, CSS y JavaScript.
-Contenido acerca de ejercicios HTML, CSS, JavaScript.
 #### Requerimientos:
 * Estructura del proyecto (archivos y directorios):
   - README
   - index.html
-  - Directorio para los scripts
   - Directorio para los estilos
   - Directorio para las imágenes
+  - Directorio para los scripts
 
 - Responsivo
 ##### Entrega
