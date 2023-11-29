@@ -56,20 +56,26 @@ document.write(retornado);
 // 20. Pedir un número, mostrar los números desde 0 hasta n.
 // 21. Pedir un número, mostrar su tabla de multiplicar desde 0 hasta 10.
 // 22. Adivinar el número, leer un número y decir si adivinó el número
-
-const adivinaNumero = (numeroAleatorio) => {
+/*
+const adivinaNumero = () => {
+  const numeroAleatorio = Math.floor(Math.random() * 10) + 1;
   console.log(numeroAleatorio);
+  let numeroUsuario = null;
+  const maximoIntentos = 3;
+  let contadorIntentos = 0;
+  do {
+    contadorIntentos++;
+    if (contadorIntentos > maximoIntentos) return;
+    numeroUsuario = prompt('Por favor ingrese un número entre 1 y 10:');
+    if (numeroUsuario > numeroAleatorio) {
+      alert('El número ingresado es mayor');
+    } else if (numeroUsuario < numeroAleatorio) {
+      alert('El número ingresado es menor');
+    } else {
+      alert('¡Adivinaste el número!');
+    }
+  } while (numeroUsuario != numeroAleatorio);
 };
 
-adivinaNumero(Math.floor(Math.random() * 10) + 1);
-/*
-do {
-    console.log("bloque ejecutandose");
-  } while (numeroUsuario != numeroAleatorio);
-*/
-
-/*
-function adivinaNumero(numeroAleatorio) {
-  console.log(numeroAleatorio);
-}
+adivinaNumero();
 */
