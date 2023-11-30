@@ -1,0 +1,19 @@
+img {
+  width: 300px;
+}
+.no-mostrar {
+  display: none;
+}
+.cargando {
+  border: 8px solid orangered;
+  border-top-color: orange;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: carga 1000ms linear infinite;
+}
+@keyframes carga {
+  to {
+    transform: rotate(360deg);
+  }
+}
