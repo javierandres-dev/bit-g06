@@ -10,13 +10,22 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <header>
+    <header
+      class="container-fluid d-flex justify-content-center align-items-center gap-5"
+    >
       <h1 class="text-center my-5">Ejemplo pokéapi</h1>
+      <h6>
+        <a class="nav-link" href="/"><i class="bi bi-house"></i></a>
+      </h6>
     </header>
-    <main class="contenedor-pokemons container"></main>
+    <main class="container"></main>
     <aside>
       <div id="spinner" class="contenedor-spinner d-none">
         <div class="spinner spinner-grow text-info" role="status">

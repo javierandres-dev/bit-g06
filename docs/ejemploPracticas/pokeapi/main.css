@@ -1,3 +1,6 @@
+.bi {
+  font-size: 64px;
+}
 .contenedor-spinner {
   border: 1px solid blue;
   position: absolute;
