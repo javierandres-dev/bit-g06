@@ -146,18 +146,42 @@ do {
   console.log('desde ciclo do...while, valor de j:', j);
   j++;
 } while (j < 5);
+const asistentes = [
+  'Darly',
+  'Laura',
+  'Andrés Martinez',
+  'Brian',
+  'Leonhard',
+  'Gabriel',
+  'C Molano',
+  'C Castro',
+  'J Moncada',
+  'Nicolas',
+  'J Anaya',
+  'Frank',
+];
+for (const asistente of asistentes) {
+  console.log(asistente);
+}
+const usuario = {
+  nombre: 'Pepita',
+  apellido: 'Pérez',
+  edad: 20,
+};
+for (const llave in usuario) {
+  console.log(usuario[llave]);
+}
 */
+
 // Funciones
 // Fu. Declarada.
 /*
-function saludar() {
-  console.log('hola');
-}
 saludar();
+function saludar() {
+  console.log('hola declarada');
+}
 const retornado = saludar();
 console.log(retornado);
-*/
-/*
 function obtenerSaludo() {
   return 'quiubo';
 }
@@ -175,6 +199,38 @@ console.log(saludarUsuario('Pepita', 'Pérez'));
 console.log(saludarUsuario('Pepito', 'López'));
 console.log(saludarUsuario('Fulanito', 'De Tal'));
 console.log(saludarUsuario());
+*/
+// Fu. Expresada
+/*
+const funcionExpresada = function () {
+  console.log('hola');
+};
+funcionExpresada();
+const funcionExpresadaFlecha = () => {
+  console.log('hola expresada');
+};
+funcionExpresadaFlecha();
+*/
+// IIFE
+/*
+(function () {
+  console.log('hola desde una IIFE');
+})();
+
+(() => {
+  console.log('hola desde una IIFE');
+})();
+*/
+
+// Argumentos Rest
+/*
+function fn(...entrada) {
+  console.log(entrada);
+}
+fn();
+fn('a');
+fn('a', 'b');
+fn('a', 'b', 'c', 'n');
 */
 // Sincrónico
 /*
@@ -201,4 +257,8 @@ const fnAsincrono = () => {
   console.log('segundo');
 };
 fnAsincrono();
+*/
+// This
+/*
+console.log(this);
 */

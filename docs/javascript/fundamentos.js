@@ -127,6 +127,7 @@ while (indice < miArreglo.length) {
   indice++;
 }
 */
+
 // TNP. Objeto.
 /*
 const miObjetoVacio = {};
@@ -151,4 +152,54 @@ miObjeto.saludar();
 miObjeto.cantidadHijos = 3;
 miObjeto.peso = 50;
 delete miObjeto.llave;
+*/
+
+// Destructurar
+/*
+const arregloNevera = [
+  'hielo',
+  'leche',
+  'jamón',
+  'lechuga',
+  'tomate',
+  'ajo',
+  'queso',
+];
+const [bebida1, bebida2] = arregloNevera;
+console.log(bebida1, bebida2);
+
+const objetoNevera = {
+  a: 'hielo',
+  b: 'leche',
+  c: 'jamón',
+  d: 'lechuga',
+  e: 'tomate',
+  f: 'ajo',
+  g: 'queso',
+};
+const { c, d, e, g } = objetoNevera;
+console.log(c, d, e, g);
+*/
+
+// Operador Spread
+/*
+const arrEllas = ['Darly', 'Laura'];
+const arrEllos = [
+  'Andrés Martinez',
+  'Brian',
+  'Leonhard',
+  'Gabriel',
+  'C Molano',
+  'C Castro',
+  'J Moncada',
+  'Nicolas',
+  'J Anaya',
+  'Frank',
+];
+console.log([...arrEllas, ...arrEllos]);
+const numeros = [10, 15, 20];
+function sumarTresNumeros(n1, n2, n3) {
+  console.log(n1 + n2 + n3);
+}
+sumarTresNumeros(...numeros);
 */
