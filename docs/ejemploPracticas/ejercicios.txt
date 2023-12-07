@@ -21,3 +21,4 @@ Si el usuario no escribe su nombre saludar: "Hola, desconocido."
 20. Pedir un número, mostrar los números desde 0 hasta n.
 21. Pedir un número, mostrar su tabla de multiplicar desde 0 hasta 10.
 22. Adivinar el número, leer un número y decir si adivinó el número.
+23. Programa que imprima los números de 1 a 100, si el número es multiplo de 3 en lugar del número imprimir Bit, si es multiplo de 5 en lugar del número imprimir Institute, si es multiplo de 3 y de 5 imprimir BitInstitute en lugar del número.
