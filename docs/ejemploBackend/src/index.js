@@ -1,11 +1,7 @@
-import express from 'express';
+import 'dotenv/config';
+import servidor from './servidor.js';
 
-const servidor = express();
-const puerto = 4100;
-
-servidor.get('/', (solicitud, respuesta) => {
-  respuesta.json({ message: 'WORKS!' });
-});
+const puerto = servidor.get('port');
 
 servidor.listen(puerto, () => {
   console.log(`Servidor ejecutandose en el puerto: ${puerto}`);
