@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 mongoose
   .connect(
-    'mongodb+srv://bit06user:NucS3zq408uO0upJ@bit-cluster.2njakta.mongodb.net/?retryWrites=true&w=majority'
+    'mongodb+srv://bit06userxXx:NucS3zq408uO0upJxXx@bit-cluster.2njakta.mongodb.net/?retryWrites=true&w=majority'
   )
   .then((dato) => console.log('Camino feliz, conectado a la base de datos.'))
   .catch((error) =>
