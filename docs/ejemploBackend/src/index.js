@@ -1,4 +1,5 @@
 import 'dotenv/config';
+import './baseDeDatos.js';
 import servidor from './servidor.js';
 
 const puerto = servidor.get('port');
