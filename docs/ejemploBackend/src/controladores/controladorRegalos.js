@@ -7,39 +7,87 @@ const ControladorRegalos = {
       const nuevoRegalo = new ModeloRegalo(solicitud.body);
       const regaloCreado = await nuevoRegalo.save();
       if (regaloCreado._id) {
-        respuesta.json({ mensaje: 'regalo creado' });
+        respuesta.json({
+          resultado: 'bien',
+          mensaje: 'regalo creado',
+          datos: regaloCreado._id,
+        });
       }
     } catch (error) {
-      respuesta.json({ mensaje: 'Ocurrió un error' });
+      respuesta.json({
+        resultado: 'mal',
+        mensaje: 'ocurrió un error',
+        datos: null,
+      });
     }
   },
   leerRegalos: async (solicitud, respuesta) => {
     try {
       const todosLosRegalos = await ModeloRegalo.find();
-      respuesta.json({ mensaje: 'todos los regalos', todosLosRegalos });
+      respuesta.json({
+        resultado: 'bien',
+        mensaje: 'todos los regalos',
+        datos: todosLosRegalos,
+      });
     } catch (error) {
-      respuesta.json({ mensaje: 'Ocurrió un error' });
+      respuesta.json({
+        resultado: 'mal',
+        mensaje: 'ocurrió un error',
+        datos: null,
+      });
     }
   },
   leerRegalo: async (solicitud, respuesta) => {
     try {
       const regalo = await ModeloRegalo.findById(solicitud.params.id);
-      respuesta.json({ mensaje: 'regalo', regalo });
+      respuesta.json({
+        resultado: 'bien',
+        mensaje: 'regalo leido',
+        datos: regalo._id,
+      });
     } catch (error) {
-      respuesta.json({ mensaje: 'Ocurrió un error' });
+      respuesta.json({
+        resultado: 'mal',
+        mensaje: 'ocurrió un error',
+        datos: null,
+      });
     }
   },
-  actualizarRegalo: (solicitud, respuesta) => {
-    respuesta.json({ mensaje: 'Hola desde PUT regalos' });
+  actualizarRegalo: async (solicitud, respuesta) => {
+    try {
+      const actualizado = await ModeloRegalo.findByIdAndUpdate(
+        solicitud.params.id,
+        solicitud.body
+      );
+      respuesta.json({
+        resultado: 'bien',
+        mensaje: 'regalo actualizado',
+        datos: actualizado._id,
+      });
+    } catch (error) {
+      respuesta.json({
+        resultado: 'mal',
+        mensaje: 'ocurrió un error',
+        datos: null,
+      });
+    }
   },
   eliminarRegalo: async (solicitud, respuesta) => {
     try {
       const eliminado = await ModeloRegalo.findByIdAndDelete(
         solicitud.params.id
       );
-      respuesta.json({ mensaje: 'Regalo eliminado' });
+      respuesta.json({
+        resultado: 'bien',
+        mensaje: 'regalo eliminado',
+        datos: eliminado._id,
+      });
     } catch (error) {
-      respuesta.json({ mensaje: 'Ocurrió un error' });
+      respuesta.json({
+        resultado: 'mal',
+        mensaje: 'ocurrió un error',
+        datos: null,
+      });
     }
   },
 };
