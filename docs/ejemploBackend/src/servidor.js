@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import enrutadorRegalos from './rutas/rutaRegalos.js';
 
 const servidor = express();
@@ -6,6 +7,7 @@ const puerto = process.env.PUERTO;
 
 servidor.set('port', puerto);
 
+servidor.use(cors());
 servidor.use(express.json());
 servidor.use('/regalos/', enrutadorRegalos);
 
