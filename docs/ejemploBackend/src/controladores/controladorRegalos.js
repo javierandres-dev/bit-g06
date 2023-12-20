@@ -24,10 +24,18 @@ const ControladorRegalos = {
   leerRegalos: async (solicitud, respuesta) => {
     try {
       const todosLosRegalos = await ModeloRegalo.find();
+      const regalos = [];
+      for (let i = 0; i < todosLosRegalos.length; i++) {
+        const objeto = {
+          id: todosLosRegalos[i]._id,
+          destinatario: todosLosRegalos[i].destinatario,
+        };
+        regalos.push(objeto);
+      }
       respuesta.json({
         resultado: 'bien',
         mensaje: 'todos los regalos',
-        datos: todosLosRegalos,
+        datos: regalos,
       });
     } catch (error) {
       respuesta.json({
@@ -43,7 +51,12 @@ const ControladorRegalos = {
       respuesta.json({
         resultado: 'bien',
         mensaje: 'regalo leido',
-        datos: regalo._id,
+        datos: {
+          id: regalo._id,
+          destinatario: regalo.destinatario,
+          nombre: regalo.nombre,
+          entregado: regalo.entregado,
+        },
       });
     } catch (error) {
       respuesta.json({
