@@ -1,0 +1,14 @@
+.btn-leer {
+  background-color: blue;
+  color: lightblue;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.btn-leer:hover {
+  background-color: lightblue;
+  color: blue;
+}
