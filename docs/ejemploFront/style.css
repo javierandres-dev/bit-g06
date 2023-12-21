@@ -14,6 +14,14 @@
   background-color: lightblue;
   color: blue;
 }
+.btn-actualizar {
+  background-color: green;
+  color: lightgreen;
+}
+.btn-actualizar:hover {
+  background-color: lightgreen;
+  color: green;
+}
 .btn-eliminar {
   background-color: salmon;
   color: pink;
@@ -21,4 +29,7 @@
 .btn-eliminar:hover {
   background-color: pink;
   color: salmon;
+}
+.no-mostrar {
+  display: none;
 }

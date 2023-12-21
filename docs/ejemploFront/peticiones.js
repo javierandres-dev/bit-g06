@@ -28,6 +28,18 @@ export async function crearRegalo(objeto) {
   return await respuesta.json();
 }
 
+export async function actualizarRegalo(id, objeto) {
+  const opciones = {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(objeto),
+  };
+  const respuesta = await fetch(`${API}regalos/${id}`, opciones);
+  return await respuesta.json();
+}
+
 export async function eliminarRegalo(id) {
   const opciones = {
     method: 'DELETE',
