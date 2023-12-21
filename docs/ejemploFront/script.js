@@ -11,6 +11,7 @@ import {
   leerRegalos,
   leerRegalo,
   crearRegalo,
+  eliminarRegalo,
 } from './peticiones.js';
 // Variables
 const d = document;
@@ -29,15 +30,25 @@ async function mostrarRegalos() {
   const listaRegalos = await leerRegalos();
   let contenidoLista = '';
   listaRegalos.datos.forEach((elemento) => {
-    contenidoLista += `<li>${elemento.destinatario} <button id="${elemento.id}" class="btn-leer">leer regalo</button></li>`;
+    contenidoLista += `<li>${elemento.destinatario} <button id="leer${elemento.id}" class="btn btn-leer">leer regalo</button> <button id="eliminar${elemento.id}" class="btn btn-eliminar">eliminar regalo</button></li>`;
   });
   $listaRegalos.innerHTML = contenidoLista;
 
   const $btnsLeer = d.querySelectorAll('.btn-leer');
   $btnsLeer.forEach(($btn) => {
     $btn.addEventListener('click', async (e) => {
-      const respuesta = await leerRegalo(e.target.id);
+      const respuesta = await leerRegalo(e.target.id.substring(4));
       $regalo.textContent = `💝 ${respuesta.datos.nombre}`;
+    });
+  });
+
+  const $btnsEliminar = d.querySelectorAll('.btn-eliminar');
+  $btnsEliminar.forEach(($btn) => {
+    $btn.addEventListener('click', async (e) => {
+      const respuesta = await eliminarRegalo(e.target.id.substring(8));
+      if (respuesta.resultado === 'bien') {
+        mostrarRegalos();
+      }
     });
   });
 }
@@ -50,8 +61,11 @@ function escucharEventos() {
       nombre: $crearRegalo.inRegalo.value,
       entregado: false,
     };
-    const retornado = await crearRegalo(objeto);
-    console.log(retornado);
+    const respuesta = await crearRegalo(objeto);
+    if (respuesta.resultado === 'bien') {
+      mostrarRegalos();
+    }
+    $crearRegalo.reset();
   });
 }
 // Ejecución del código

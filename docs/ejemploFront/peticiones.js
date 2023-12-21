@@ -27,3 +27,11 @@ export async function crearRegalo(objeto) {
   const respuesta = await fetch(`${API}regalos`, opciones);
   return await respuesta.json();
 }
+
+export async function eliminarRegalo(id) {
+  const opciones = {
+    method: 'DELETE',
+  };
+  const respuesta = await fetch(`${API}regalos/${id}`, opciones);
+  return await respuesta.json();
+}
