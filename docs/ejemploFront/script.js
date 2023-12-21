@@ -6,13 +6,19 @@
 */
 'use strict';
 // Importaciones
-import { obtenerRaiz, leerRegalos, leerRegalo } from './peticiones.js';
+import {
+  obtenerRaiz,
+  leerRegalos,
+  leerRegalo,
+  crearRegalo,
+} from './peticiones.js';
 // Variables
 const d = document;
 
 const $saludo = d.getElementById('saludo'),
   $listaRegalos = d.getElementById('listaRegalos'),
-  $regalo = d.getElementById('regalo');
+  $regalo = d.getElementById('regalo'),
+  $crearRegalo = d.getElementById('crearRegalo');
 // Funciones
 async function saludar() {
   const retornado = await obtenerRaiz();
@@ -35,8 +41,22 @@ async function mostrarRegalos() {
     });
   });
 }
+
+function escucharEventos() {
+  $crearRegalo.addEventListener('submit', async (evento) => {
+    evento.preventDefault();
+    const objeto = {
+      destinatario: $crearRegalo.inDestinatario.value,
+      nombre: $crearRegalo.inRegalo.value,
+      entregado: false,
+    };
+    const retornado = await crearRegalo(objeto);
+    console.log(retornado);
+  });
+}
 // Ejecución del código
 d.addEventListener('DOMContentLoaded', () => {
   saludar();
   mostrarRegalos();
+  escucharEventos();
 });

@@ -15,3 +15,15 @@ export async function leerRegalo(id) {
   const respuesta = await fetch(API + 'regalos/' + id);
   return await respuesta.json();
 }
+
+export async function crearRegalo(objeto) {
+  const opciones = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(objeto),
+  };
+  const respuesta = await fetch(`${API}regalos`, opciones);
+  return await respuesta.json();
+}
