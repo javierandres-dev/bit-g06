@@ -44,17 +44,15 @@ Fecha de entrega: Lunes, 4 de diciembre de 2023, si entrega en otra fecha la not
 ---
 ### Proyecto calificable 3
 #### Objetivo
+Hacer una Rest API y probarla con Postman
 #### Requerimientos:
 * Estructura del proyecto (archivos y directorios):
   - README
-  - index.html
-  - Directorio para los estilos
-  - Directorio para las imágenes
-  - Directorio para los scripts
-
-- Responsivo
+* Rest API acerca de usuarios
+  - Operaciones CRUD
+  - El esquema de un usuario debe tener "nombre de usuario" y "contraseña"
 ##### Entrega
-Fecha de entrega: POR DEFINIR, si entrega en otra fecha la nota máxima sera de 3.5
+Fecha de entrega: Viernes, 22 de diciembre de 2023, si entrega en otra fecha la nota máxima sera de 3.5
 - Tiempo límite: 2 minutos
 - Nota máxima: 5
 - Compartir cámara, micrófono y pantalla.
