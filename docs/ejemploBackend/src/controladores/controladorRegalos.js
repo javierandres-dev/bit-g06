@@ -17,7 +17,7 @@ const ControladorRegalos = {
       respuesta.json({
         resultado: 'mal',
         mensaje: 'ocurrió un error',
-        datos: null,
+        datos: error,
       });
     }
   },
@@ -41,7 +41,7 @@ const ControladorRegalos = {
       respuesta.json({
         resultado: 'mal',
         mensaje: 'ocurrió un error',
-        datos: null,
+        datos: error,
       });
     }
   },
@@ -62,7 +62,7 @@ const ControladorRegalos = {
       respuesta.json({
         resultado: 'mal',
         mensaje: 'ocurrió un error',
-        datos: null,
+        datos: error,
       });
     }
   },
@@ -81,7 +81,7 @@ const ControladorRegalos = {
       respuesta.json({
         resultado: 'mal',
         mensaje: 'ocurrió un error',
-        datos: null,
+        datos: error,
       });
     }
   },
@@ -99,7 +99,7 @@ const ControladorRegalos = {
       respuesta.json({
         resultado: 'mal',
         mensaje: 'ocurrió un error',
-        datos: null,
+        datos: error,
       });
     }
   },
