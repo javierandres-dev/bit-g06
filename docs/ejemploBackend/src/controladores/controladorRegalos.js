@@ -1,6 +1,5 @@
 import ModeloRegalo from '../modelos/modeloRegalo.js';
 
-// CRUD: Create, Read, Update, Delete => Crear, Leer, Actualizar, Eliminar
 const ControladorRegalos = {
   crearRegalo: async (solicitud, respuesta) => {
     try {
