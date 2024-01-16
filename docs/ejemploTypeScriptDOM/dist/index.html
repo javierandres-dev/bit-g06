@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>TS- DOM</title>
+  </head>
+  <body>
+    <header><h1>Empleados</h1></header>
+    <main>
+      <section>
+        <form>
+          <fieldset>
+            <legend>Nombre Completo</legend>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" />
+            <label for="apellido">Apellido</label>
+            <input type="text" name="apellido" id="apellido" />
+          </fieldset>
+          <fieldset>
+            <legend>Edad</legend>
+            <label for="nacimiento">Fecha de nacimiento</label>
+            <input type="date" name="nacimiento" id="" />
+            <label>Edad</label>
+            <input type="text" readonly disabled />
+          </fieldset>
+          <fieldset>
+            <legend>Género</legend>
+            <label for="masculino">Masculino</label>
+            <input type="radio" name="genero" id="masculino" />
+            <label for="femenino">Femenino</label>
+            <input type="radio" name="genero" id="femenino" />
+          </fieldset>
+          <fieldset>
+            <legend>Contacto</legend>
+            <label for="telefono">Teléfono</label>
+            <input
+              type="tel"
+              name="telefono"
+              id="telefono"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            />
+            <label for="correo">Correo electrónico</label>
+            <input type="email" name="correo" id="correo" />
+            <label for="web">Web</label>
+            <input type="url" name="web" id="web" />
+          </fieldset>
+          <fieldset>
+            <legend>Familia</legend>
+            <label for="estadoCivil">Estado civil</label>
+            <select name="estadoCivil" id="estadoCivil">
+              <option value="" selected disabled>
+                Seleccione un opción...
+              </option>
+              <option value="soltero">Soltera/o</option>
+              <option value="casado">Casada/o</option>
+              <option value="viudo">Viuda/o</option>
+              <option value="divorciado">Divorciada/o</option>
+              <option value="separado">Separada/o</option>
+            </select>
+            <label for="hijos">hijos</label>
+            <input list="hijos" name="hijos" />
+            <datalist id="hijos">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </datalist>
+          </fieldset>
+          <fieldset>
+            <legend>Propiedades</legend>
+            <label for="vivienda">Vivienda</label>
+            <input type="checkbox" name="vivienda" id="vivienda" />
+            <label for="vehiculo">Vehículo</label>
+            <input type="checkbox" name="vehiculo" id="vehiculo" />
+          </fieldset>
+          <fieldset>
+            <legend>Gustos</legend>
+            <div>
+              <label>Clima frio</label>
+              <input type="range" name="clima" min="0" max="2" />
+              <label>Clima cálido</label>
+            </div>
+            <div>
+              <label for="almuerzo">Hora de almuerzo</label>
+              <input type="time" name="almuerzo" id="almuerzo" />
+            </div>
+            <div>
+              <label for="color">Color favorito</label>
+              <input type="color" name="color" id="color" />
+            </div>
+            <label for="pasatiempos">Pasatiempos</label>
+            <textarea name="pasatiempos" id="pasatiempos"></textarea>
+          </fieldset>
+          <fieldset>
+            <legend>Salario</legend>
+            <label for="salario">Salario</label>
+            <input type="number" name="salario" id="salario" />
+          </fieldset>
+          <input type="reset" value="Limpiar formulario" />
+          <input type="submit" value="Agregar empleado" />
+        </form>
+      </section>
+      <section>
+        <table>
+          <thead>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Género</th>
+            <th>Estado civil</th>
+            <th>Hijos</th>
+            <th>Teléfono</th>
+            <th>Correo electrónico</th>
+            <th>Web</th>
+            <th>Vivienda</th>
+            <th>Vehículo</th>
+            <th>Clima</th>
+            <th>Hora de almuerzo</th>
+            <th>Color</th>
+            <th>Pasatiempos</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pepita Pérez</td>
+              <td>55 años</td>
+              <td>Femenino</td>
+              <td>Casada</td>
+              <td>7</td>
+              <td>300-333-4444</td>
+              <td>pepita@asd.com</td>
+              <td>http://bit.institute</td>
+              <td>Si</td>
+              <td>Si</td>
+              <td>Templado</td>
+              <td>1PM</td>
+              <td class="circulo" style="background-color: aqua"></td>
+              <td>pasear al perro, yoga, leer</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer>
+      <p><small>&copy; 2024</small></p>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
