@@ -21,16 +21,21 @@
           <fieldset>
             <legend>Edad</legend>
             <label for="nacimiento">Fecha de nacimiento</label>
-            <input type="date" name="nacimiento" id="" />
+            <input type="date" name="nacimiento" id="nacimiento" />
             <label>Edad</label>
-            <input type="text" readonly disabled />
+            <input type="text" name="edad" readonly disabled />
           </fieldset>
           <fieldset>
             <legend>Género</legend>
             <label for="masculino">Masculino</label>
-            <input type="radio" name="genero" id="masculino" />
+            <input
+              type="radio"
+              name="genero"
+              id="masculino"
+              value="masculino"
+            />
             <label for="femenino">Femenino</label>
-            <input type="radio" name="genero" id="femenino" />
+            <input type="radio" name="genero" id="femenino" value="femenino" />
           </fieldset>
           <fieldset>
             <legend>Contacto</legend>
@@ -118,25 +123,9 @@
             <th>Hora de almuerzo</th>
             <th>Color</th>
             <th>Pasatiempos</th>
+            <th>Salario</th>
           </thead>
-          <tbody>
-            <tr>
-              <td>Pepita Pérez</td>
-              <td>55 años</td>
-              <td>Femenino</td>
-              <td>Casada</td>
-              <td>7</td>
-              <td>300-333-4444</td>
-              <td>pepita@asd.com</td>
-              <td>http://bit.institute</td>
-              <td>Si</td>
-              <td>Si</td>
-              <td>Templado</td>
-              <td>1PM</td>
-              <td class="circulo" style="background-color: #44f005"></td>
-              <td>pasear al perro, yoga, leer</td>
-            </tr>
-          </tbody>
+          <tbody></tbody>
         </table>
       </section>
     </main>
