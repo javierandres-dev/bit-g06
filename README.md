@@ -57,4 +57,44 @@ Fecha de entrega: Viernes, 22 de diciembre de 2023, si entrega en otra fecha la 
 - Nota máxima: 5
 - Compartir cámara, micrófono y pantalla.
 ---
+### Proyecto calificable 4
+#### Equipos
+Los Patotes
+
+- Gabriel Martinez
+- Carlos Molano
+- Juan Moncada
+
+Dinamita
+
+- Darly Prada
+- Juan Riaño
+- Brian Córdoba
+
+WiFi
+
+- Sebastian Castillo
+- Andres Martines
+- Daniel Romero
+
+Los  Ctrl + Felices
+
+- Frank Ramirez
+- Jefferson Villamizar
+
+Devs
+
+- Laura Garzón
+- Nicolas Guzmán
+#### Objetivo
+Hacer una aplicación web con TypeScript - Generador de grupos
+#### Requerimientos:
+- Entrada: Nombres de participantes
+- Salida: Grupos aleatorios
+##### Entrega
+Fecha de entrega: Lunes, 22 de enero de 2024, si entrega en otra fecha la nota máxima sera de 3.5
+- Tiempo límite: 2 minutos
+- Nota máxima: 5
+- Compartir cámara, micrófono y pantalla por/en grupo.
+---
 [Página del curso](https://javierandres-dev.github.io/bit-repo_06/)
