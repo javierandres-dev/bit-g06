@@ -89,6 +89,7 @@ Devs
 #### Objetivo
 Hacer una aplicación web con TypeScript - Generador de grupos
 #### Requerimientos:
+- Solo frontend: HTML, CSS, TypeScript
 - Entrada: Nombres de participantes
 - Salida: Grupos aleatorios
 ##### Entrega
