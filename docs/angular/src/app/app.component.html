@@ -1,0 +1,30 @@
+<h1>root works!</h1>
+<hr />
+<h2>Propiedades e interpolación</h2>
+<section>
+  <p>Nombre usuario: {{ nombreUsuario }}</p>
+  <p>10 x 3 = {{ 10 * 3 }}</p>
+</section>
+<h2>Control de flujo</h2>
+<section>
+  @if (estaLogueado){
+  <p>¡Bienvenido!</p>
+  }@else{
+  <p>Por favor inicie sesión</p>
+  }
+  <ul>
+    @for (framework of frameworks; track $index){
+    <li>{{ framework }}</li>
+    }
+  </ul>
+  <ol>
+    @for(desarrollador of desarrolladores; track desarrollador.id){
+    <li>{{ desarrollador.nombre }}</li>
+    }
+  </ol>
+</section>
+<h2>Enlace de propiedades</h2>
+<section>
+  <button type="button" [disabled]="!estaLogueado">Cerrar sesión</button>
+</section>
+<!-- <router-outlet></router-outlet> -->
