@@ -1,26 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { NavegacionComponent } from './components/navegacion/navegacion.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, NavegacionComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
-  nombreUsuario: string = 'Pepita';
-  estaLogueado: boolean = false;
-  frameworks: string[] = ['angular', 'react', 'vue', 'svelte'];
-  desarrolladores: any[] = [
-    {
-      id: 1,
-      nombre: 'Laura',
-    },
-    {
-      id: 2,
-      nombre: 'Darly',
-    },
-  ];
-}
+export class AppComponent {}
