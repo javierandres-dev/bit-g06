@@ -27,3 +27,17 @@
 <section>
   <button type="button" [disabled]="!estaLogueado">Cerrar sesión</button>
 </section>
+<h2>Maneno de eventos</h2>
+<section>
+  <button type="button" (click)="manejarClick()">Clickeame</button>
+  <div
+    class="{{ bgColor }}"
+    (mouseover)="manejarMouseover()"
+    (mousedown)="manejarMousedown()"
+    (mouseup)="manejarMouseup()"
+  ></div>
+</section>
+<h2>Pasando datos</h2>
+<section>
+  <app-padre></app-padre>
+</section>
