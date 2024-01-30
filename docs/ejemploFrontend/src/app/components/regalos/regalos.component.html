@@ -1,7 +1,119 @@
 <section>
+  <button
+    type="button"
+    class="btn btn-primary"
+    data-bs-toggle="modal"
+    data-bs-target="#modal"
+    (click)="mostrarModalAgregar()"
+  >
+    Agregar
+  </button>
+</section>
+<section>
   <ol class="list-group list-group-numbered">
-    <li class="list-group-item">A list item</li>
-    <li class="list-group-item">A list item</li>
-    <li class="list-group-item">A list item</li>
+    @for (regalo of todosLosRegalos; track regalo.id) {
+    <li
+      class="list-group-item d-flex justify-content-between align-items-center"
+    >
+      <div>{{ regalo.destinatario }}</div>
+      <div
+        class="btn-group"
+        role="group"
+        aria-label="Basic mixed styles example"
+      >
+        <button
+          type="button"
+          class="btn btn-success"
+          data-bs-toggle="modal"
+          data-bs-target="#modal"
+          (click)="mostrarModalVer(regalo.id)"
+        >
+          Ver
+        </button>
+        <button
+          type="button"
+          class="btn btn-warning"
+          data-bs-toggle="modal"
+          data-bs-target="#modal"
+          (click)="mostrarModalEditar(regalo.id)"
+        >
+          Editar
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger"
+          data-bs-toggle="modal"
+          data-bs-target="#modal"
+          (click)="mostrarModalEliminar(regalo.id)"
+        >
+          Eliminar
+        </button>
+      </div>
+    </li>
+    }
   </ol>
+</section>
+<section>
+  <div
+    class="modal fade"
+    id="modal"
+    tabindex="-1"
+    aria-labelledby="modalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalLabel">{{ modalTitulo }}</h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          @if (modalBoton === "Crear") {
+          <div>
+            <input
+              type="text"
+              placeholder="Destinatario"
+              [(ngModel)]="regalo.destinatario"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              placeholder="Regalo"
+              [(ngModel)]="regalo.nombre"
+            />
+          </div>
+          }@if (modalBoton=== "Ver") {
+          <div>...Ver...ID: {{ regaloId }}</div>
+          }@if (modalBoton=== "Actualizar") {
+          <div>...Actualizar...ID: {{ regaloId }}</div>
+          }@if (modalBoton=== "Eliminar") {
+          <div>...Eliminar...ID: {{ regaloId }}</div>
+          }
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Cerrar
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="manejarAccion()"
+            data-bs-dismiss="modal"
+          >
+            {{ modalBoton }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
