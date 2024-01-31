@@ -10,6 +10,7 @@
   </button>
 </section>
 <section>
+  @if (todosLosRegalos.length) {
   <ol class="list-group list-group-numbered">
     @for (regalo of todosLosRegalos; track regalo.id) {
     <li
@@ -52,6 +53,9 @@
     </li>
     }
   </ol>
+  }@else {
+  <div class="alert alert-info" role="alert">No existen registros.</div>
+  }
 </section>
 <section>
   <div
@@ -70,6 +74,7 @@
             class="btn-close"
             data-bs-dismiss="modal"
             aria-label="Close"
+            (click)="restablecerPropiedades()"
           ></button>
         </div>
         <div class="modal-body">
@@ -89,11 +94,38 @@
             />
           </div>
           }@if (modalBoton=== "Ver") {
-          <div>...Ver...ID: {{ regaloId }}</div>
+          <div>
+            El regalo de {{ regalo.destinatario }} un/una {{ regalo.nombre }} y
+            {{ regalo.entregado ? "si" : "no" }} fue entregado
+          </div>
           }@if (modalBoton=== "Actualizar") {
-          <div>...Actualizar...ID: {{ regaloId }}</div>
+          <div>
+            <input
+              type="text"
+              placeholder="Destinatario"
+              [(ngModel)]="regalo.destinatario"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              placeholder="Regalo"
+              [(ngModel)]="regalo.nombre"
+            />
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+              [(ngModel)]="regalo.entregado"
+            />
+            <label class="form-check-label" for="exampleCheck1"
+              >Entregado</label
+            >
+          </div>
           }@if (modalBoton=== "Eliminar") {
-          <div>...Eliminar...ID: {{ regaloId }}</div>
+          <div>Esta operación no se puede deshacer</div>
           }
         </div>
         <div class="modal-footer">
@@ -101,12 +133,14 @@
             type="button"
             class="btn btn-secondary"
             data-bs-dismiss="modal"
+            (click)="restablecerPropiedades()"
           >
             Cerrar
           </button>
           <button
             type="button"
-            class="btn btn-primary"
+            class="btn btn-{{ modalColorBoton }}"
+            [disabled]="modalBoton === 'Ver'"
             (click)="manejarAccion()"
             data-bs-dismiss="modal"
           >
