@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { RegalosService } from '../../services/regalos.service';
 import { Regalo } from '../../interfaces/regalos';
 
@@ -11,6 +12,7 @@ import { Regalo } from '../../interfaces/regalos';
   styleUrl: './regalos.component.css',
 })
 export class RegalosComponent {
+  toastrService = inject(ToastrService);
   regalosService = inject(RegalosService);
 
   regaloInicial: Regalo = {
@@ -41,25 +43,37 @@ export class RegalosComponent {
       this.regalosService
         .crearRegalo(this.regalo)
         .subscribe((respuesta: any) => {
-          console.log(respuesta);
-          this.restablecerPropiedades();
-          this.obtenerTodosLosRegalos();
+          if (respuesta.resultado === 'bien') {
+            this.restablecerPropiedades();
+            this.obtenerTodosLosRegalos();
+            this.toastrService.success(respuesta.mensaje);
+          } else {
+            this.toastrService.error(respuesta.mensaje);
+          }
         });
     } else if (this.modalBoton === 'Actualizar') {
       this.regalosService
         .actualizarRegalo(this.regaloId, this.regalo)
         .subscribe((respuesta: any) => {
-          console.log(respuesta);
-          this.restablecerPropiedades();
-          this.obtenerTodosLosRegalos();
+          if (respuesta.resultado === 'bien') {
+            this.restablecerPropiedades();
+            this.obtenerTodosLosRegalos();
+            this.toastrService.success(respuesta.mensaje);
+          } else {
+            this.toastrService.error(respuesta.mensaje);
+          }
         });
     } else if (this.modalBoton === 'Eliminar') {
       this.regalosService
         .eliminarRegalo(this.regaloId)
         .subscribe((respuesta: any) => {
-          console.log(respuesta);
-          this.restablecerPropiedades();
-          this.obtenerTodosLosRegalos();
+          if (respuesta.resultado === 'bien') {
+            this.restablecerPropiedades();
+            this.obtenerTodosLosRegalos();
+            this.toastrService.warning(respuesta.mensaje);
+          } else {
+            this.toastrService.error(respuesta.mensaje);
+          }
         });
     }
   }
@@ -72,10 +86,15 @@ export class RegalosComponent {
 
   mostrarModalVer(id: string) {
     this.modalTitulo = 'Detalles';
-    this.modalBoton = 'Ver';
+    this.modalBoton = `Ver`;
     this.modalColorBoton = 'outline-light';
     this.regalosService.leerRegalo(id).subscribe((respuesta: any) => {
-      this.regalo = respuesta.datos;
+      if (respuesta.resultado === 'bien') {
+        this.regalo = respuesta.datos;
+        this.toastrService.info(respuesta.mensaje);
+      } else {
+        this.toastrService.error(respuesta.mensaje);
+      }
     });
   }
 
@@ -85,7 +104,12 @@ export class RegalosComponent {
     this.modalBoton = 'Actualizar';
     this.modalColorBoton = 'warning';
     this.regalosService.leerRegalo(id).subscribe((respuesta: any) => {
-      this.regalo = respuesta.datos;
+      if (respuesta.resultado === 'bien') {
+        this.regalo = respuesta.datos;
+        this.toastrService.warning(respuesta.mensaje);
+      } else {
+        this.toastrService.error(respuesta.mensaje);
+      }
     });
   }
 
@@ -98,7 +122,12 @@ export class RegalosComponent {
 
   obtenerTodosLosRegalos() {
     this.regalosService.leerTodosLosRegalos().subscribe((respuesta: any) => {
-      this.todosLosRegalos = respuesta.datos;
+      if (respuesta.resultado === 'bien') {
+        this.todosLosRegalos = respuesta.datos;
+        this.toastrService.info(respuesta.mensaje);
+      } else {
+        this.toastrService.error(respuesta.mensaje);
+      }
     });
   }
 
