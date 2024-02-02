@@ -90,4 +90,4 @@ Fecha de entrega: Lunes, 22 de enero de 2024, si entrega en otra fecha la nota m
 - Nota máxima: 5
 - Compartir cámara, micrófono y pantalla por/en grupo.
 
-[Página del curso](https://javierandres-dev.github.io/bit-repo_06/)
+[DEVS](https://javierandres-dev.github.io/bit-g06/)
