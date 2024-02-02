@@ -1,4 +1,6 @@
-# bit-repo_06
+# bit-g06
+---
+:copyright: 2024
 ---
 ### Proyecto (opcional)
 #### Objetivo
