@@ -1,10 +1,17 @@
+import bcrypt from 'bcryptjs';
 import ModeloUsuario from '../modelos/modeloUsuario.js';
 
-// CRUD: Create, Read, Update, Delete => Crear, Leer, Actualizar, Eliminar
 const ControladorUsuarios = {
   crearUsuario: async (solicitud, respuesta) => {
     try {
-      const nuevoUsuario = new ModeloUsuario(solicitud.body);
+      console.log(solicitud.body);
+      const { nombre, nombreUsuario, contrasenia } = solicitud.body;
+      const hashContrasenia = await bcrypt.hash(contrasenia, 10);
+      const nuevoUsuario = new ModeloUsuario({
+        nombre,
+        nombreUsuario,
+        contrasenia: hashContrasenia,
+      });
       const usuarioCreado = await nuevoUsuario.save();
       if (usuarioCreado._id) {
         respuesta.json({

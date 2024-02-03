@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import enrutadorRegalos from './rutas/rutaRegalos.js';
+import enrutadorSesion from './rutas/rutaSesion.js';
 import enrutadorUsuarios from './rutas/rutaUsuarios.js';
 
 const servidor = express();
@@ -13,6 +14,7 @@ servidor.use(cors());
 servidor.use(morgan('dev'));
 servidor.use(express.json());
 servidor.use('/regalos/', enrutadorRegalos);
+servidor.use('/sesion/', enrutadorSesion);
 servidor.use('/usuarios/', enrutadorUsuarios);
 
 servidor.get('/', (solicitud, respuesta) => {
