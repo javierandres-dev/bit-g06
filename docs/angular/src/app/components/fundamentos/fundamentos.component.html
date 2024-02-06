@@ -41,3 +41,28 @@
 <section>
   <app-padre></app-padre>
 </section>
+<h2>formularios</h2>
+<section>
+  <h3>formularios template-driven</h3>
+  <form>
+    <label>
+      <input
+        type="text"
+        name="frameworkFavorito"
+        placeholder="framework favorito"
+        [(ngModel)]="frameworkFavorito"
+      />
+    </label>
+    <button (click)="mostrarFrameworkFavorito()">Ver framework favorito</button>
+  </form>
+  <h3>formularios reactivos</h3>
+  <form [formGroup]="formularioCredenciales" (ngSubmit)="manejarEnvio()">
+    <input type="text" placeholder="usuario" formControlName="usuario" />
+    <input
+      type="password"
+      placeholder="contraseña"
+      formControlName="contrasenia"
+    />
+    <button>Iniciar sesión</button>
+  </form>
+</section>
