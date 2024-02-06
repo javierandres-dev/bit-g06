@@ -1,1 +1,27 @@
-<section><p>inicio-de-sesion works!</p></section>
+<form [formGroup]="formularioCredenciales" (ngSubmit)="manejarEnvio()">
+  <div class="mb-3">
+    <label for="usuario" class="form-label">Usuario</label>
+    <input
+      type="text"
+      class="form-control"
+      id="usuario"
+      formControlName="nombreUsuario"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="contrasenia" class="form-label">Contraseña</label>
+    <input
+      type="password"
+      class="form-control"
+      id="contrasenia"
+      formControlName="contrasenia"
+    />
+  </div>
+  <button
+    type="submit"
+    class="btn btn-primary"
+    [disabled]="!formularioCredenciales.valid"
+  >
+    Submit
+  </button>
+</form>
