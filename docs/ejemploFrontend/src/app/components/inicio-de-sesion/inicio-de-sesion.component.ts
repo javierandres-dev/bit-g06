@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {
   ReactiveFormsModule,
   FormGroup,
   FormControl,
   Validators,
 } from '@angular/forms';
+import { JwtHelperService } from '@auth0/angular-jwt';
+import { ToastrService } from 'ngx-toastr';
+import { SesionService } from '../../services/sesion.service';
+import { Sesion } from '../../interfaces/sesion';
+
+const jwtHelperService = new JwtHelperService();
 
 @Component({
   selector: 'app-inicio-de-sesion',
@@ -14,14 +20,42 @@ import {
   styleUrl: './inicio-de-sesion.component.css',
 })
 export class InicioDeSesionComponent {
+  sesionService: SesionService = inject(SesionService);
+  toastrService = inject(ToastrService);
   formularioCredenciales = new FormGroup({
     nombreUsuario: new FormControl('', Validators.required),
     contrasenia: new FormControl('', Validators.required),
   });
   manejarEnvio() {
     if (this.formularioCredenciales.valid) {
-      console.log(this.formularioCredenciales.value.nombreUsuario);
-      console.log(this.formularioCredenciales.value.contrasenia);
+      const nombreUsuario = this.formularioCredenciales.value.nombreUsuario;
+      const contrasenia = this.formularioCredenciales.value.contrasenia;
+
+      if (
+        typeof nombreUsuario === 'string' &&
+        typeof contrasenia === 'string'
+      ) {
+        const credenciales: Sesion = {
+          nombreUsuario,
+          contrasenia,
+        };
+        this.sesionService
+          .iniciarSesion(credenciales)
+          .subscribe((respuesta: any) => {
+            if (respuesta.resultado === 'bien') {
+              const decodificado = jwtHelperService.decodeToken(
+                respuesta.datos.token
+              );
+              localStorage.setItem('token', respuesta.datos.token);
+              localStorage.setItem('data', JSON.stringify(decodificado));
+              this.toastrService.success(
+                respuesta.mensaje + ' ' + decodificado.nombre
+              );
+            } else {
+              this.toastrService.error(respuesta.mensaje);
+            }
+          });
+      }
     }
   }
 }
