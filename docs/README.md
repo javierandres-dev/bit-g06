@@ -89,5 +89,28 @@ Fecha de entrega: Lunes, 22 de enero de 2024, si entrega en otra fecha la nota m
 - Tiempo límite: 2 minutos
 - Nota máxima: 5
 - Compartir cámara, micrófono y pantalla por/en grupo.
+## Proyecto calificable 5
+Hacer un proyecto full stack con base en la pila de tecnologías MEAN.
+### Requerimientos:
+- README completo con detalles acerca del proyecto e instrucciones para ejecutarlo en local.
+#### Backend
+- API para gestión de usuarios
+- API para inicio de sesión de usuarios
+- API para operaciones CRUD de su aplicación
+#### Frontend
+- UI con contenido público
+* UI para iniciar sesión
+  - UI consumir API de inicio de sesión
+* UI con contenido privado
+  - UI para operaciones CRUD de suaplicación
 
+- Contenido público y contenido privado de libre elección.
+- Responsivo
+### Entrega
+Fecha de entrega: Lunes, 19 de febrero de 2024, si entrega en otra fecha la nota máxima sera de 3.5
+
+- Tiempo límite: 2 minutos
+- Nota máxima: 5
+- Compartir cámara, micrófono y pantalla.
+---
 [DEVS](https://javierandres-dev.github.io/bit-g06/)
