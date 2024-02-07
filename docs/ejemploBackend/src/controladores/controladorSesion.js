@@ -19,7 +19,7 @@ const ControladorSesion = {
           });
           respuesta.json({
             resultado: 'bien',
-            mensaje: 'token',
+            mensaje: 'Bienvenida/o',
             datos: token,
           });
         } else {
