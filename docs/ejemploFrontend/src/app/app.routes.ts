@@ -3,6 +3,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { InicioDeSesionComponent } from './components/inicio-de-sesion/inicio-de-sesion.component';
 import { RegalosComponent } from './components/regalos/regalos.component';
 import { Error404Component } from './components/error404/error404.component';
+import { activarGuard } from './guards/activar.guard';
 
 export const routes: Routes = [
   { path: 'inicio', component: InicioComponent, title: 'Inicio' },
@@ -11,7 +12,12 @@ export const routes: Routes = [
     component: InicioDeSesionComponent,
     title: 'Inicio de sesión',
   },
-  { path: 'regalos', component: RegalosComponent, title: 'regalos' },
+  {
+    path: 'regalos',
+    component: RegalosComponent,
+    title: 'regalos',
+    canActivate: [activarGuard],
+  },
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
   { path: '**', component: Error404Component, title: 'Error 404' },
 ];
