@@ -102,7 +102,7 @@ Hacer un proyecto full stack con base en la pila de tecnologías MEAN.
 * UI para iniciar sesión
   - UI consumir API de inicio de sesión
 * UI con contenido privado
-  - UI para operaciones CRUD de suaplicación
+  - UI para operaciones CRUD de su aplicación
 
 - Contenido público y contenido privado de libre elección.
 - Responsivo
