@@ -1,5 +1,15 @@
 <nav class="text-center my-5">
-  <a routerLink="inicio">Inicio</a> |
-  <a routerLink="inicio-de-sesion">Inicio de sesión</a> |
+  <a routerLink="inicio">Inicio</a> | @if (sesionService.estaLogueado()) {
+  <button
+    type="button"
+    class="btn btn-link"
+    (click)="sesionService.cerrarSesion()"
+  >
+    Cerrar sesión
+  </button>
+  |
   <a routerLink="regalos">Regalos</a>
+  } @else {
+  <a routerLink="inicio-de-sesion">Inicio de sesión</a>
+  }
 </nav>

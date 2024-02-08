@@ -5,6 +5,7 @@ import {
   FormControl,
   Validators,
 } from '@angular/forms';
+import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { ToastrService } from 'ngx-toastr';
 import { SesionService } from '../../services/sesion.service';
@@ -20,8 +21,9 @@ const jwtHelperService = new JwtHelperService();
   styleUrl: './inicio-de-sesion.component.css',
 })
 export class InicioDeSesionComponent {
-  sesionService: SesionService = inject(SesionService);
+  router = inject(Router);
   toastrService = inject(ToastrService);
+  sesionService: SesionService = inject(SesionService);
   formularioCredenciales = new FormGroup({
     nombreUsuario: new FormControl('', Validators.required),
     contrasenia: new FormControl('', Validators.required),
@@ -47,10 +49,11 @@ export class InicioDeSesionComponent {
                 respuesta.datos.token
               );
               localStorage.setItem('token', respuesta.datos.token);
-              localStorage.setItem('data', JSON.stringify(decodificado));
+              //localStorage.setItem('data', JSON.stringify(decodificado));
               this.toastrService.success(
                 respuesta.mensaje + ' ' + decodificado.nombre
               );
+              this.router.navigateByUrl('/regalos');
             } else {
               this.toastrService.error(respuesta.mensaje);
             }
