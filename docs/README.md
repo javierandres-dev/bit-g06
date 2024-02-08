@@ -35,7 +35,7 @@ Fecha de entrega: Lunes, 4 de diciembre de 2023, si entrega en otra fecha la not
 - Tiempo límite: 2 minutos
 - Nota máxima: 5
 - Compartir cámara, micrófono y pantalla.
-### Proyecto calificable 3
+## Proyecto calificable 3
 Hacer una Rest API y probarla con Postman
 ### Requerimientos:
 * Estructura del proyecto (archivos y directorios):
