@@ -94,6 +94,7 @@ Hacer un proyecto full stack con base en la pila de tecnologías MEAN.
 ### Requerimientos:
 - README completo con detalles acerca del proyecto e instrucciones para ejecutarlo en local.
 #### Backend
+- Base de datos en MongoDB Atlas
 - API para gestión de usuarios
 - API para inicio de sesión de usuarios
 - API para operaciones CRUD de su aplicación
