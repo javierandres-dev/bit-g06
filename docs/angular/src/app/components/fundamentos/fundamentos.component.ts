@@ -6,11 +6,17 @@ import {
   FormGroup,
 } from '@angular/forms';
 import { PadreComponent } from '../padre/padre.component';
+import { ContadorPadreComponent } from '../contador-padre/contador-padre.component';
 
 @Component({
   selector: 'app-fundamentos',
   standalone: true,
-  imports: [FormsModule, PadreComponent, ReactiveFormsModule],
+  imports: [
+    FormsModule,
+    PadreComponent,
+    ReactiveFormsModule,
+    ContadorPadreComponent,
+  ],
   templateUrl: './fundamentos.component.html',
   styleUrl: './fundamentos.component.css',
 })

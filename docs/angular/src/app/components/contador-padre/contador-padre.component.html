@@ -1,0 +1,6 @@
+<p>contador-padre works!</p>
+<p>El doble: {{ elDoble }}</p>
+<app-contador-hijo
+  [contador]="10"
+  (emisorEvento)="recibirEmisor($event)"
+></app-contador-hijo>
