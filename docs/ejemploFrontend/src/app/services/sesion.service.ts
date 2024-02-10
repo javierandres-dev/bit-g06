@@ -16,6 +16,10 @@ export class SesionService {
     return this.httpClient.post(this.API_URL, credenciales);
   }
 
+  validarToken(token: string) {
+    return this.httpClient.get(`${this.API_URL}/${token}`);
+  }
+
   estaLogueado() {
     if (localStorage.getItem('token')) {
       return true;

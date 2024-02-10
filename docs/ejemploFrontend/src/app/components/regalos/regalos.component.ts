@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { SesionService } from '../../services/sesion.service';
 import { RegalosService } from '../../services/regalos.service';
 import { Regalo } from '../../interfaces/regalos';
 
@@ -13,6 +14,7 @@ import { Regalo } from '../../interfaces/regalos';
 })
 export class RegalosComponent {
   toastrService = inject(ToastrService);
+  sesionService = inject(SesionService);
   regalosService = inject(RegalosService);
 
   regaloInicial: Regalo = {
@@ -132,6 +134,17 @@ export class RegalosComponent {
   }
 
   ngOnInit() {
-    this.obtenerTodosLosRegalos();
+    const token = localStorage.getItem('token');
+    if (token) {
+      this.sesionService.validarToken(token).subscribe((respuesta: any) => {
+        if (respuesta.resultado === 'bien') {
+          this.obtenerTodosLosRegalos();
+        } else {
+          this.sesionService.cerrarSesion();
+        }
+      });
+    } else {
+      this.sesionService.cerrarSesion();
+    }
   }
 }
