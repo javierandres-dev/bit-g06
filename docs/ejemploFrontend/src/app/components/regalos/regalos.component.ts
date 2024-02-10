@@ -32,6 +32,8 @@ export class RegalosComponent {
 
   regaloId: string = '';
 
+  nombreUsuario: string = '';
+
   restablecerPropiedades() {
     this.modalTitulo = '';
     this.modalBoton = '';
@@ -138,6 +140,7 @@ export class RegalosComponent {
     if (token) {
       this.sesionService.validarToken(token).subscribe((respuesta: any) => {
         if (respuesta.resultado === 'bien') {
+          this.nombreUsuario = respuesta.datos.nombre;
           this.obtenerTodosLosRegalos();
         } else {
           this.sesionService.cerrarSesion();
