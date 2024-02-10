@@ -1,6 +1,6 @@
 import bcrypt from 'bcryptjs';
 import ModeloUsuario from '../modelos/modeloUsuario.js';
-import { generarToken } from '../helpers/funciones.js';
+import { generarToken, verificarToken } from '../helpers/funciones.js';
 
 const ControladorSesion = {
   loguearUsuario: async (solicitud, respuesta) => {
@@ -34,6 +34,25 @@ const ControladorSesion = {
           resultado: 'mal',
           mensaje: 'Credenciales incorrectas',
           datos: null,
+        });
+      }
+    } catch (error) {
+      respuesta.json({
+        resultado: 'mal',
+        mensaje: 'ocurrió un error',
+        datos: error,
+      });
+    }
+  },
+  validarToken: async (solicitud, respuesta) => {
+    try {
+      const token = solicitud.params.token;
+      const decodificado = await verificarToken(token);
+      if (decodificado.id) {
+        respuesta.json({
+          resultado: 'bien',
+          mensaje: 'válido',
+          datos: decodificado,
         });
       }
     } catch (error) {
