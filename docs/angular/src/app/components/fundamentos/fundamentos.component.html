@@ -70,3 +70,29 @@
     <button>Iniciar sesión</button>
   </form>
 </section>
+<h3>aplazamiento de vista / vistas diferibles</h3>
+<section>
+  @defer (on viewport){
+  <div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, iste
+      quasi id accusantium aliquam corporis a ab maiores. Ut perferendis amet
+      odit possimus nostrum asperiores dolor saepe quo excepturi voluptates.
+    </p>
+    <ul>
+      <li>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, odit.
+      </li>
+      <li>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae.
+      </li>
+      <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+      <li>Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+    </ul>
+  </div>
+  } @placeholder {
+  <p>Futura información</p>
+  }@loading (minimum 4s){
+  <p>cargando...</p>
+  }
+</section>
