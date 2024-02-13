@@ -12,7 +12,7 @@
   </button>
 </section>
 <section>
-  @if (todosLosRegalos.length) {
+  @defer{ @if (todosLosRegalos.length) {
   <ol class="list-group list-group-numbered">
     @for (regalo of todosLosRegalos; track regalo.id) {
     <li
@@ -55,8 +55,20 @@
     </li>
     }
   </ol>
-  }@else {
+  <!-- <div class="alert alert-info" role="alert">No existen registros.</div> -->
+  } }@placeholder {
   <div class="alert alert-info" role="alert">No existen registros.</div>
+  <!--   <div class="d-flex justify-content-center">
+    <div class="spinner-border text-info" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div> -->
+  }@loading (minimum 3s){
+  <div class="d-flex justify-content-center">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
   }
 </section>
 <section>
