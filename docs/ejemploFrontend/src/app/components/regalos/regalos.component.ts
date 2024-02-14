@@ -150,4 +150,26 @@ export class RegalosComponent {
       this.sesionService.cerrarSesion();
     }
   }
+
+  buscar = {
+    termino: '',
+  };
+
+  manejarSubmitBuscar() {
+    console.log(this.buscar.termino);
+    const resultado = this.todosLosRegalos.filter(
+      (regalo) => regalo.destinatario === this.buscar.termino
+    );
+    console.log('resultado:', resultado);
+  }
+
+  manejarKeyupBuscar() {
+    console.log(this.buscar.termino);
+    const termino = this.buscar.termino.toLowerCase();
+    console.log(termino);
+    const resultado = this.todosLosRegalos.filter(
+      (regalo) => regalo.destinatario.toLowerCase().indexOf(termino) > -1
+    );
+    console.log('resultado:', resultado);
+  }
 }

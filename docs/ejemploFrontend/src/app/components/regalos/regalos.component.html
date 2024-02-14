@@ -11,6 +11,32 @@
     Agregar
   </button>
 </section>
+<section class="my-5">
+  <form class="d-flex" role="search" (ngSubmit)="manejarSubmitBuscar()">
+    <input
+      class="form-control me-2"
+      type="search"
+      placeholder="Search"
+      aria-label="Search"
+      name="termino"
+      [(ngModel)]="buscar.termino"
+    />
+    <button class="btn btn-outline-success" type="submit">Buscar</button>
+  </form>
+</section>
+<section class="my-5">
+  <form class="d-flex" role="search">
+    <input
+      class="form-control me-2"
+      type="search"
+      placeholder="Search"
+      aria-label="Search"
+      name="termino"
+      [(ngModel)]="buscar.termino"
+      (keyup)="manejarKeyupBuscar()"
+    />
+  </form>
+</section>
 <section>
   @defer{ @if (todosLosRegalos.length) {
   <ol class="list-group list-group-numbered">
