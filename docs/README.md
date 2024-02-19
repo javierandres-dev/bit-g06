@@ -108,7 +108,7 @@ Hacer un proyecto full stack con base en la pila de tecnologías MEAN.
 - Contenido público y contenido privado de libre elección.
 - Responsivo
 ### Entrega
-Fecha de entrega: Lunes, 19 de febrero de 2024, si entrega en otra fecha la nota máxima sera de 3.5
+Fecha de entrega: Viernes, 23 de febrero de 2024, si entrega en otra fecha la nota máxima sera de 3.5
 
 - Tiempo límite: 2 minutos
 - Nota máxima: 5
