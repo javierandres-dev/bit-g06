@@ -2,7 +2,7 @@ import { Schema, model } from 'mongoose';
 
 const esquemaImagen = new Schema(
   {
-    nombre: { type: String, required: true },
+    nombre: { type: String, required: false },
     imagen: { data: Buffer, contentType: String },
   },
   { versionKey: false, timestamps: true }
