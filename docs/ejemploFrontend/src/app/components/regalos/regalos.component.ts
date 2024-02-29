@@ -5,6 +5,8 @@ import { SesionService } from '../../services/sesion.service';
 import { RegalosService } from '../../services/regalos.service';
 import { Regalo } from '../../interfaces/regalos';
 
+import { HttpClient } from '@angular/common/http';
+
 @Component({
   selector: 'app-regalos',
   standalone: true,
@@ -13,6 +15,8 @@ import { Regalo } from '../../interfaces/regalos';
   styleUrl: './regalos.component.css',
 })
 export class RegalosComponent {
+  constructor(private http: HttpClient) {}
+
   toastrService = inject(ToastrService);
   sesionService = inject(SesionService);
   regalosService = inject(RegalosService);
@@ -171,5 +175,20 @@ export class RegalosComponent {
       (regalo) => regalo.destinatario.toLowerCase().indexOf(termino) > -1
     );
     console.log('resultado:', resultado);
+  }
+
+  cargarImagen(evento: any) {
+    const imagen = evento.target.files[0];
+    if (imagen.type === 'image/png') {
+      const formData = new FormData();
+      formData.append('archivo_subido', imagen);
+      this.http
+        .post('http://localhost:4100/imagenes', formData)
+        .subscribe((respuesta: any) => {
+          console.log('respuesta:', respuesta);
+        });
+    } else {
+      this.toastrService.error("Solo se permiten archivos 'PNG'");
+    }
   }
 }
